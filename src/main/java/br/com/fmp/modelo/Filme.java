@@ -4,11 +4,12 @@ public class Filme {
 
 	private String nome;
 	private String genero;
+	private String capa;
 	private Integer ano;
-	
-	public Filme(String nome, String genero, Integer ano) {
+	public Filme(String nome, String genero,String capa, Integer ano) {
 		this.nome = nome;
 		this.genero = genero;
+		this.capa = capa;
 		this.ano = ano;
 	}
 
@@ -22,6 +23,9 @@ public class Filme {
 
 	public Integer getAno() {
 		return ano;
+	}
+	public String getCapa() {
+		return capa;
 	}
 	
 }

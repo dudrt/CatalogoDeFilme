@@ -5,25 +5,25 @@
 <title>Lista de Filmes</title>
 </head>
 <body>
-	Lista de Filmes:
-	<ol>
-		<li>
-			Nome: Titanic <br>
-			Genêro: Drama <br>
-			Ano: 1997
-		</li>
-	
-		<li>
-			Nome: John Wick <br>
-			Genêro: Ação <br>
-			Ano: 2014
-		</li>
-		
-		<li>
-			Nome: À Procura da Felicidade <br>
-			Genêro: Drama <br>
-			Ano: 2006
-		</li>
-	</ol>
+	<center>
+	<select id="genero">
+  		<option value="ação">Ação</option>
+		<option value="terror">Terror</option>
+  		<option value="Ficção Científica">Ficção Científica</option>
+  		<option value="Drama">Drama</option>
+  		<option value="Crime">Crime</option>
+  		<option value="Romance">Romance</option>
+  		<option value="Animação">Animação</option>
+
+</select>
+	<button onclick=ChamarGenero()>Pesquisar</button>
+	</center>
+
+	<script>
+		function ChamarGenero(){
+			let genero = document.getElementById("genero").value
+     		window.location.assign("http://localhost:8080/CatalogoDeFilme/filme?genero="+genero)
+		}
+	</script>
 </body>
 </html>
